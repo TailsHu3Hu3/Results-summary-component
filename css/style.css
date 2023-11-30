@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Font-Colors */
+    --primaryFont: white;
+    --resultColor: hsl(221, 100%, 96%);
+    --spanNumber: hsl(224, 45%, 60%);
+    --description: hsl(241, 100%, 89%);
+    
+    /* Gradients */
+    --topGradient: rgba(120,87,255,1);
+    --bottomGradient: rgba(46,43,233,1);
+    --cTopGradient: rgba(78,33,202,1);
+    --cBottomGradient: rgba(36,33,202,1);
+
+    /* Summary colors */
+    
+    --reactionColor: hsl(0, 100%, 67%);
+    --visualColor: hsl(234, 85%, 45%);
+    --verbalColor: hsl(166, 100%, 37%);
+    --memoryColor: hsl(39, 100%, 56%);
+}
+
+body, html {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: var(--resultColor);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+/********************
+*    YOUR RESULT    *
+*********************/
+
+/*************Box*************/
+
+.container .box {
+    background: rgb(120,87,255);
+    background: linear-gradient(180deg, var(--topGradient) 0%, var(--bottomGradient) 100%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    width: 350px;
+}
+
+.container .box .boxContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 30px 20px;
+}
+
+.container .box h1 {
+    color: var(--description);
+    margin: 30px 0 50px 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/*************Result*************/
+
+.container .box .circleDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.container .box .circle {
+    background: rgb(78,33,202);
+    background: linear-gradient(180deg, var(--cTopGradient) 0%, var(--cBottomGradient) 100%);
+    border-radius: 50%;
+    width:fit-content;
+    display: flex;
+    flex-direction:column;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+.container .box .circle .resultNumber {
+    color: var(--primaryFont);
+    font-size: 70px;
+    padding: 0 20px;
+}
+
+.container .box .circle .capNumber {
+    color: var(--spanNumber);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*************Description*************/
+
+.container .box h2 {
+    color: var(--primaryFont);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.container .box .scoreDescription {
+    color: var(--description);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 40px 20px 40px;
+}
+
+/********************
+*      SUMMARY      *
+*********************/
+
+.summaryBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 32rem;
+    background-color: white;
+    border-radius: 30px;
+}
+
+h3 {
+    align-self: self-start;
+    padding-left: 50px;
+    padding-top: 55px;
+    font-size: 22px;
+}
+
+.resultSummaryDiv {
+    padding: 20px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+/********SummaryText********/
+ul li {
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px var(--resultColor);
+}
+
+.divSummaryBoxes {
+    display: inline-block;
+    width: 95px;
+}
+
+.summaryTextR {
+    color: var(--reactionColor);
+}
+.summaryTextVis {
+    color: var(--visualColor);
+}
+.summaryTextVer {
+    color: var(--verbalColor);
+}
+.summaryTextM {
+    color: var(--memoryColor);
+}
+img {
+    position: relative;
+    top: 4px;
+    margin-left: 2px;
+}
+
+
+.summaryNumber {
+    padding-right: 5px;
+    padding-left: 50px;
+}
+
+.capNumberSummary {
+    color: var(--spanNumber);
+}
+
+/*********Button********/
+button {
+    width: 100%;
+    padding: 15px;
+    border-style: none;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: rgb(32, 32, 66);
+    color: white;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+
+/********************
+*      CREDITS      *
+*********************/
+
+.attribution {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--bottomGradient);
+}
+
+.attribution .myLink {
+    color: #3c065e;
+}
+
+/********************
+*       HOVER       *
+*********************/
+
+button:hover {
+    background: rgb(120,87,255);
+    background: linear-gradient(180deg, var(--topGradient) 0%, var(--bottomGradient) 100%);
+    cursor: pointer;
+    transition-duration: 2s;
+}
+
+.attribution a:hover {
+    color: var(--topGradient);
+    transition-duration: 500ms;
+}
+
+.attribution .myLink:hover {
+    color: #7805c0;
+    transition-duration: 500ms;
+}
+
+/********************
+*       MEDIA       *
+*********************/
+
+@media (Max-width: 426px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .box {
+        margin-top: 700px;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: fit-content;
+        height: max-content;
+    }
+    .summaryBox {
+        background-color: var(--resultColor);
+    }
+
+    h3 {
+        align-self: center;
+        padding-left: 0;
+    }
+
+    .attribution {
+        width: 450px;
+        margin-top: 650px;
+    }
+}
